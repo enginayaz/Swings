@@ -53,8 +53,8 @@ void testApp::setup(){
     
     // VOLUME ADJUST - TWO TRACKS
     //sample1 = childrenSounds;
-    sample1 = heartbeatWav;
-    sample2 = rainMp3;
+    sample1 = &heartbeatWav;
+    sample2 = &rainMp3;
     
     /*
     // PITCH ADJUST - does not work with mp3s
@@ -109,17 +109,17 @@ void testApp::draw() {
 void testApp::volumeAdjustOneTrack(){
     
     float adjustedVolume = ofMap(fabs(ofxAccelerometer.getForce().y) * fabs(ofxAccelerometer.getForce().y), 0, 1.1, 0, 1);
-    sample1.setVolume(adjustedVolume);
-    if(sample1.getIsPlaying() == false) sample1.play();
+    sample1->setVolume(adjustedVolume);
+    if(sample1->getIsPlaying() == false) sample1->play();
 }
 
 
 
-void testApp::volumeAdjustOneTrack(ofxOpenALSoundPlayer sample){
+void testApp::volumeAdjustOneTrack(ofxOpenALSoundPlayer *sample){
     
     float adjustedVolume = ofMap(fabs(ofxAccelerometer.getForce().y) * fabs(ofxAccelerometer.getForce().y), 0, 1.1, 0, 1);
-    sample1.setVolume(adjustedVolume);
-    if(sample1.getIsPlaying() == false) sample.play();
+    sample1->setVolume(adjustedVolume);
+    if(sample1->getIsPlaying() == false) sample->play();
     
 }
 
@@ -131,11 +131,11 @@ void testApp::volumeAdjustTwoTracks(){
     
     printf("volume= %f ", adjustedVolume);
     
-    sample1.setVolume(1-adjustedVolume);
-    sample2.setVolume(adjustedVolume);
+    sample1->setVolume(1-adjustedVolume);
+    sample2->setVolume(adjustedVolume);
     
-    if(sample1.getIsPlaying() == false) sample1.play();
-    if(sample2.getIsPlaying() == false) sample2.play();
+    if(sample1->getIsPlaying() == false) sample1->play();
+    if(sample2->getIsPlaying() == false) sample2->play();
     
 }
 

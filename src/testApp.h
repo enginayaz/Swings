@@ -27,7 +27,7 @@ public:
 	void gotMessage(ofMessage msg);
 	
     void volumeAdjustOneTrack(); // first iteration
-    void volumeAdjustOneTrack(ofxOpenALSoundPlayer sample);
+    void volumeAdjustOneTrack(ofxOpenALSoundPlayer *sample);
     
     void volumeAdjustTwoTracks();
     
@@ -49,10 +49,10 @@ public:
     ofxOpenALSoundPlayer heartbeatMp3;
     ofxOpenALSoundPlayer heartbeatWav;
     
-    ofxOpenALSoundPlayer sample1;
-    ofxOpenALSoundPlayer sample2;
-    ofxOpenALSoundPlayer sample3;
-    ofxOpenALSoundPlayer sample4;
+    ofxOpenALSoundPlayer *sample1;
+    ofxOpenALSoundPlayer *sample2;
+    ofxOpenALSoundPlayer *sample3;
+    ofxOpenALSoundPlayer *sample4;
 
     
     bool soundOption1;
