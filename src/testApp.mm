@@ -22,6 +22,7 @@ void testApp::setup(){
 	arrow.loadImage("arrow.png");
 	arrow.setAnchorPercent(1.0, 0.5);
     
+    
     // added this from openAl example
     ofSetFrameRate(20);
 	
