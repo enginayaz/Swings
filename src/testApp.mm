@@ -30,7 +30,7 @@ void testApp::setup(){
 	ofxOpenALSoundPlayer::ofxALSoundSetListenerLocation(ofGetWidth()/2,0,ofGetHeight()/2);
 	ofxOpenALSoundPlayer::ofxALSoundSetReferenceDistance(10);
 	ofxOpenALSoundPlayer::ofxALSoundSetMaxDistance(500);
-	ofxOpenALSoundPlayer::ofxALSoundSetListenerGain(5.0);
+	ofxOpenALSoundPlayer::ofxALSoundSetListenerGain(5.0); TEST TEST
     */
     
     //childrenSounds.loadSound("children.mp3");;
